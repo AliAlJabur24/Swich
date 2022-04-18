@@ -2,9 +2,13 @@
 chrome extension that allows Twitch streamers to stream music directly to their viewers through the application
 
 • Created NodeJs Express Page to allow a user Login system to allow users to log in using Twitch Authentication
+
 • Created A custom Node js API to allow requests from Server to Client Using Socket.io Websockets
+
 • Sent real-time Spotify data to sever through the chrome extension and WebSockets
+
 • Implemented Youtube Player API to stream music in realtime to viewers
+
 • Used: HTML , CSS, Javascript, Node js, Express
 
 
