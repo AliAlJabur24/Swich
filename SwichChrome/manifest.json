@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Swich",
+    "version": "0.1",
+    "icons": {
+        "16": "SwichLogo16.png",
+        "48": "SwichLogo48.png",
+        "128": "SwichLogo128.png"
+    },
+    "web_accessible_resources": ["SwichYoutubeVideo.js"],
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["content.js", "jquery-3.5.1.min.js"]
+    }],
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js https://cdn.socket.io/3.1.1/socket.io.min.js https://www.youtube.com/iframe_api; object-src 'self'",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "browser_action": {
+        "default_popup": "sketch/index.html",
+        "default_title": "Swich Chrome"
+    }
+
+}

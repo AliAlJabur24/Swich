@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    .main {
+        width: 340px;
+        border-radius: 14px;
+    }
+    
+    .Info {
+        text-align: center;
+        border-radius: 14px;
+        border-radius: 14px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    h1 {
+        text-align: center;
+        padding-top: 15px;
+        margin: 0;
+        font-family: Roboto;
+        font-style: normal;
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    #Streamer {
+        height: 83px;
+        width: 165px;
+        border: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 11px;
+    }
+    
+    #Viewer {
+        height: 83px;
+        width: 165px;
+        border: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 11px;
+    }
+    
+    .buttons {
+        padding-top: 25px;
+    }
+    
+    #SongName {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 29px;
+        color: #000000;
+        margin: 13px;
+    }
+    
+    #SongImage {
+        width: 250px;
+        height: 250px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        border-radius: 8px;
+    }
+    
+    #StreamerUsername {
+        font-size: 13px;
+    }
+    
+    #StreamerButtons {
+        width: 165px;
+        border: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 11px;
+    }
+    
+    #stopcast {
+        width: 165px;
+        border: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 150%;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 11px;
+    }
+</style>
+
+<body>
+    <section class="main">
+        <div class="Info">
+            <div id="AccontSelection" hidden>
+                <h1>Account</h1>
+                <div class="buttons">
+                    <button id="Streamer">Streamer</button>
+                    <button id="Viewer">Viewer</button>
+                    <button id="AccountCheck">Check(Dev)</button>
+                </div>
+            </div>
+            <div id="StreamerPanel" hidden>
+                <h1>Streamer Panel</h1>
+                <p id="accountwarning" hidden>❌Account Is not Connected Please Go to Swich.com to connect❌</p>
+                <img src="" alt="" id="SongImage">
+                <div>
+                    <p id="SongName"></p>
+                    <p id="StreamerUsername"></p>
+                    <p id="SongPostion"></p>
+                    <p id="SongDuration"></p>
+                    <div style="display: inline">
+                        <button id="StreamerButtons"><p>Start Casting</p></button>
+                        <button id="stopcast"><p>Stop Casting</p></button>
+                    </div>
+                </div>
+            </div>
+            <div id="ViewerPanel" hidden>
+                <h1>Viewer Panel</h1>
+                <p id="TwitchStreamData"></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
